@@ -53,7 +53,7 @@ public class OrderInfoController extends HttpServlet {
                         orderInfo.shippingAsBilling();
                     } else {
                         session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
-                        response.sendRedirect("http://localhost:8080/OrderInformation.jsp"); //sends the user to the paymentInfo page
+                        response.sendRedirect("http://localhost:8080/BookstoreWebsite/OrderInformation.jsp"); //sends the user to the paymentInfo page
                         return;
                     }
                 } else {
@@ -74,21 +74,21 @@ public class OrderInfoController extends HttpServlet {
                             orderInfo.setEmailAddress(email);
                         } else {
                             session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
-                            response.sendRedirect("http://localhost:8080/OrderInformation.jsp"); //sends the user to the paymentInfo page
+                            response.sendRedirect("http://localhost:8080/BookstoreWebsite/OrderInformation.jsp"); //sends the user to the paymentInfo page
                             return;
                         }
                     }
                 }
                 session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
-                response.sendRedirect("http://localhost:8080/paymentInfo.jsp"); //sends the user to the paymentInfo page
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite/paymentInfo.jsp"); //sends the user to the paymentInfo page
                 return;
             }
             session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
-            response.sendRedirect("http://localhost:8080/OrderInformation.jsp"); //sends the user to the paymentInfo page
+            response.sendRedirect("http://localhost:8080/BookstoreWebsite/OrderInformation.jsp"); //sends the user to the paymentInfo page
             return;
         }
         session.setAttribute("orderInfo", orderInfo); //posts the new orderInfo to the session
-        response.sendRedirect("http://localhost:8080/paymentInfo.jsp"); //goes to the payment Information Screen
+        response.sendRedirect("http://localhost:8080/BookstoreWebsite/paymentInfo.jsp"); //goes to the payment Information Screen
         return;
     }
 

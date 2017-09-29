@@ -21,14 +21,14 @@ public class paypalController extends HttpServlet {
             String paypalEmail = request.getParameter("paypalEmail");
             String paypalPassword = request.getParameter("paypalPassword");
             if (paypalPassword.length() >= 8 && !paypalEmail.equals("")) {
-                response.sendRedirect("http://localhost:8080/OrderConfirmation.jsp"); //sends the user to the confirmation page
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite/OrderConfirmation.jsp"); //sends the user to the confirmation page
                 return;
             } else {
-                response.sendRedirect("http://localhost:8080/paypal.jsp"); //sends the user back to the paypal page for information re-entry
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite/paypal.jsp"); //sends the user back to the paypal page for information re-entry
                 return;
             }
         }
-        response.sendRedirect("http://localhost:8080/paypal.jsp"); //sends the user back to the paypal page for information re-entry
+        response.sendRedirect("http://localhost:8080/BookstoreWebsite/paypal.jsp"); //sends the user back to the paypal page for information re-entry
         return;
     }
 }
