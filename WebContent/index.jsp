@@ -1,9 +1,3 @@
-<%-- 
-    Document   : bookDetails
-    Created on : Apr 19, 2017, 8:34:43 PM
-    Author     : Adam Hayes
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -41,5 +35,7 @@
     </head>
     <body>
         <a href ="http://localhost:8080/BookstoreWebsite/shoppingCart.jsp"><img src="image/images/ksu (1).png" width = "300" height = "100" alt = "Kennesaw Logo"></a>
+        
+        <a href="login.jsp">Login</a>
     </body>
 </html>
