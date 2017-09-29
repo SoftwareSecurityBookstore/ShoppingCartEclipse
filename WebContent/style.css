@@ -12,7 +12,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-button {
+input.submit {
     background-color: #155ca3;
     color: white;
     padding: 14px 20px;
@@ -22,7 +22,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+input:hover {
     opacity: 0.8;
 }
 

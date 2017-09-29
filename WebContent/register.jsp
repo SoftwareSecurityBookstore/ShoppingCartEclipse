@@ -21,9 +21,10 @@
 	    <label><b>Password</b></label>
 	    <input type="password" placeholder="Enter Password" name="password" required>
 	
-	    <button type="submit">Register</button>
+	    <input class="submit" type="submit" value="Register"/>
 	    
 	  </div>
+  	</form>
 	<a href="login.jsp">Login</a>
 </body>
 </html>

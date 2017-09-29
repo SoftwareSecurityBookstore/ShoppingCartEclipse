@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td>
-                    <p style="text-align: right"> State</p>
+                    <p style="text-align: right"> State:</p>
                 </td>
                 <td>
                     <select name="shippingState">
@@ -170,7 +170,7 @@
             </tr>
             <tr>
                 <td>
-                    <p style="text-align: right"> State</p>
+                    <p style="text-align: right"> State:</p>
                 </td>
                 <td>
                     <select name="billingState">

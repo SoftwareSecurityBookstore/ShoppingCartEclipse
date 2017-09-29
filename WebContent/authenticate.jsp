@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-<%@ page import ="java.sql.*" %>    
+<%@ page import ="java.sql.*, java.util.concurrent.TimeUnit" %>    
     
 <%
     String username = request.getParameter("username");   
@@ -15,6 +15,9 @@
     ResultSet rs = pst.executeQuery();       
     if(rs.next()){
     	out.println("Welcome " + username);
+    	boolean loggedIn = true;
+    	//out.println("<a href='index.jsp> Go to book selection</a>");
+    	session.setAttribute("loggedIn", new Boolean(loggedIn));
     	response.sendRedirect("index.jsp");  
     }     
     else{
