@@ -39,6 +39,7 @@
         if( session.getAttribute("loggedIn") != null) {
         	Boolean loggedIn =  (Boolean) session.getAttribute("loggedIn");
         	if(loggedIn.booleanValue()){
+        		out.println("<a href='logout.jsp'>Logout</a>");
         		//display logged in information
         	} else {
         		out.println("<a href='logout.jsp'>Logout</a>");
