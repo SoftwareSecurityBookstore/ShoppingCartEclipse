@@ -20,7 +20,7 @@
     </tr>
 </table>
 
-    <h1>&emsp;&emsp;Please Select a Payment Type</h1>
+    <h1>&emsp;&emsp;Please Input your Credit Card </h1>
     <form method="post" action='${pageContext.request.contextPath}/paymentInfoController'>
         <label> &emsp;Visa/Mastercard <input type="radio" name="paymentSelect" value="creditCard" checked/></label>
         <br>
@@ -45,12 +45,6 @@
         /
         <input type="number" name="year" maxlength="4" value="" placeholder="e.g. 2017"/><br>
         <label>&emsp;CVV: <input type="number" name="cvv" maxlength="3" value="" placeholder="e.g. 123"/></label>
-        <br>
-        <br>
-        <label>&emsp;PayPal <input type="radio" name="paymentSelect" value="paypal"/></label>
-        <br>
-        <br>
-        <label>&emsp;Financial Aid <input type="radio" name="paymentSelect" value="financialAid"/></label>
         <br>
         <br>
         <pre>           <input type="submit" value="Submit" name="paymentOptionSubmit"></pre>

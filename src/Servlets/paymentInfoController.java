@@ -33,6 +33,8 @@ public class paymentInfoController extends HttpServlet {
                 String cardCvv = request.getParameter("cvv");
                 int intCardCvv = Integer.parseInt(cardCvv);
                 if(creditNumLength != 16 || intCardYear < 2017 || intCardCvv != 777) {
+                	String paymentError = "Invalid card information, please try again";
+                	session.setAttribute("paymentError", paymentError);
                     response.sendRedirect("http://localhost:8080/BookstoreWebsite/paymentInfo.jsp"); //sends the user to the paymentInfo page
                     return;
                 } else {
