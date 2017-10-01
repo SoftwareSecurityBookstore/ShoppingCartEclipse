@@ -28,4 +28,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/tables.db</name>
+			<type>1</type>
+			<location>C:/Users/anorri17/eclipse-workspace/ShoppingCartEclipse-master.zip_expanded/ShoppingCartEclipse-master/WebContent/bookstore.db</location>
+		</link>
+	</linkedResources>
 </projectDescription>
