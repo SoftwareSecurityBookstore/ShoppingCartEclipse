@@ -33,13 +33,15 @@
             <tbody>
             	<% for (int i = 0; i < books.size(); i++) {
                     a = books.get(i);
+                    isbn = a.getIsbnForCovers();
                     out.println("<tr>");
                     out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
                     out.println("<td>" + a.getBookName() + "</td>");
                     out.println("<td>" + a.getAuthor() + "</td>");
                     out.println("<td>" + a.getNewQuantity() + "</td>");
-                    out.println("<td>" + a.getNewPrice() + "</td>");
-            	}
+                    out.println("<td>" + a.getNewPrice() + "</td>");%>
+                    <td><form method='POST' action='${pageContext.request.contextPath}/bookListController'><input style="width: 50px;" type='number' name='Qty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Add' /></form>Max Qty: <%out.print(a.getNewQuantity());%> </td>
+            	<%}
             	%>
             </tbody>
      </table>
