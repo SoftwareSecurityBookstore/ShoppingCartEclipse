@@ -11,10 +11,16 @@
         <%
         if( session.getAttribute("loggedIn") != null) {
         	Boolean loggedIn =  (Boolean) session.getAttribute("loggedIn");
+        	
         	if(loggedIn.booleanValue()){
         		out.println("<a href='logout.jsp'>Logout</a>");
+        		out.println("<a href='shoppingCart.jsp'><img src='image/images/cart.png' alt='cart' width='80' height ='80'/></a>");
+        		out.println("</br>");
+        		out.println("<a href='bookList.jsp'>Book List</a>");
         		//display logged in information
-        	} else {
+        	}
+        	else {
+        		
         		out.println("<h1>Welcome to the Kennesaw Bookstore</h1></br>");
         		out.println("<h2>Please either login or register to begin using the bookstore<h2>");
         		out.println("<a href='login.jsp'>Login</a>");
@@ -23,7 +29,8 @@
         		out.println("</br>");
         		out.println("<a href='bookList.jsp'>Book List</a>");
         	}
-        } else {
+        } 
+        else {
         	out.println("<a href='logout.jsp'>Logout</a>");
         	out.println("</br>");
     		out.println("<h1>Welcome to the Kennesaw Bookstore</h1></br>");
