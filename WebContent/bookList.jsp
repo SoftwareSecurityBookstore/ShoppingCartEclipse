@@ -18,6 +18,17 @@
 	
 	<%//iterate through the list of books and display each book
 	//each book needs to have an add to cart button %>
+	<table width = "75%">
+        <tr>
+            <td width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
+            <td width="20%">
+                <a href="shoppingCart.jsp"><img src="image/images/cart.png" alt="cart" width="80" height ="80"/></a>
+            </td>
+            <td>
+            	<a href="logout.jsp">Logout</a>
+            </td>
+        </tr>
+    </table>
 	<table style ="margin: 0 auto;" border="1">
             <thead>
 
@@ -40,7 +51,7 @@
                     out.println("<td>" + a.getAuthor() + "</td>");
                     out.println("<td>" + a.getNewQuantity() + "</td>");
                     out.println("<td>" + a.getNewPrice() + "</td>");%>
-                    <td><form method='POST' action='${pageContext.request.contextPath}/bookListController'><input style="width: 50px;" type='number' name='Qty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Add' /></form>Max Qty: <%out.print(a.getNewQuantity());%> </td>
+                    <td><form method='POST' action='${pageContext.request.contextPath}/BookListController'><input style="width: 50px;" type='number' name='Qty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Add' /></form>Max Qty: <%out.print(a.getNewQuantity());%> </td>
             	<%}
             	%>
             </tbody>

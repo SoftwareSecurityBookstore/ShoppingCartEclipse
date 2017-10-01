@@ -8,13 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ConfirmationController", urlPatterns = {"/ConfirmationController"})
-public class ConfirmationController extends HttpServlet {
-
-    @Override
+@WebServlet(name = "BookListController", urlPatterns = {"/BookListController"})
+public class BookListController extends HttpServlet {
+	
+	@Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
-    	//todo: update the books database and subtract the number of books purchased in this session.
-    	
-    	response.sendRedirect("bookList.jsp");
-    }
+		
+	}
 }
