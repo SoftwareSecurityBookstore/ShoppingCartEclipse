@@ -1,6 +1,8 @@
 package Servlets;
 
 import java.io.IOException;
+import java.sql.*;
+import Objects.Book;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +19,27 @@ public class ConfirmationController extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
     	HttpSession session = request.getSession();
     	ShoppingCart cart = (ShoppingCart) request.getAttribute("cart");
-    	//todo: update the books database and subtract the number of books purchased in this session.
+    	
+    	//update the books database and subtract the number of books purchased in this session.
+    	try {
+	    	Class.forName("org.sqlite.JDBC");
+	        String path = getServletContext().getRealPath("bookstore.db");
+	        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + path);          
+	        Statement stat = conn.createStatement();   
+
+	        for(int i = 0; i < cart.getNumItemsInCart(); i++) {
+	        	Book b = cart.getBook(i);
+	        	int amountPurchased = cart.getBookQuantity(i);
+	        	int newAmount = b.getNewQuantity() - amountPurchased;
+	        	stat.executeQuery("update books set newQuantity = '" + newAmount + "' where isbn = '" + b.getIsbn() + "'");
+	        }
+
+	        conn.commit();
+	        stat.close();
+	        conn.close();
+    	} catch(Exception e){
+    		
+    	}
     	
     	response.sendRedirect("bookList.jsp");
     }
