@@ -22,19 +22,23 @@
             <thead>
 
                 <tr>
-                    <th>Qty</th>
-                    <th>Update Qty</th>
                     <th>Book Cover</th>
                     <th>Book Title</th>
-                    <th>Book Type</th>
-                    <th>Price Per Book</th>
-                    <th>Total Price</th>
+                    <th>Author</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Add to Cart</th>
                 </tr>
             </thead>
             <tbody>
             	<% for (int i = 0; i < books.size(); i++) {
                     a = books.get(i);
                     out.println("<tr>");
+                    out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
+                    out.println("<td>" + a.getBookName() + "</td>");
+                    out.println("<td>" + a.getAuthor() + "</td>");
+                    out.println("<td>" + a.getNewQuantity() + "</td>");
+                    out.println("<td>" + a.getNewPrice() + "</td>");
             	}
             	%>
             </tbody>
