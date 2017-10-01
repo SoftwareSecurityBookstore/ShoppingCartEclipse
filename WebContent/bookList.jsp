@@ -80,9 +80,13 @@
                     out.println("<td>" + a.getNewPrice() + "</td>");%>
                     <td><form method='POST' action='${pageContext.request.contextPath}/BookListController'><input style="width: 50px;" type='number' name='Qty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Add' /></form>Max Qty: <%out.print(a.getNewQuantity());%> </td>
             	<%  out.println("<tr>");
+            		counter++;
+            		index++;
             	}
+            	session.setAttribute("bookList", books);
             	%>
             </tbody>
      </table>
+     <div style="text-align: center"><input type="submit" name="action" value="Checkout"/></div>
 </body>
 </html>
