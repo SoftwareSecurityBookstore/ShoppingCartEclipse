@@ -26,8 +26,7 @@
         		out.println("<a href='login.jsp'>Login</a>");
         		out.println("</br>");
         		out.println("<a href='register.jsp'>Register</a>");
-        		out.println("</br>");
-        		out.println("<a href='bookList.jsp'>Book List</a>");
+        		
         	}
         } 
         else {
@@ -38,8 +37,7 @@
     		out.println("<a href='login.jsp'>Login</a>");
     		out.println("</br>");
     		out.println("<a href='register.jsp'>Register</a>");
-    		out.println("</br>");
-    		out.println("<a href='bookList.jsp'>Book List</a>");
+    		
         }%>
         
     </body>
