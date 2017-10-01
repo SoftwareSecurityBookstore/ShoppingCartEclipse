@@ -14,9 +14,10 @@
 <table width = "75%">
     <tr>
         <td width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
-        <td width="25%">
+        <td width="20%">
             <a href="shoppingCart.jsp"><img src="image/images/cart.png" alt="cart" width="80" height ="80"/></a>
         </td>
+        <td width="5%"><a href="logout.jsp">Logout</a></td>
     </tr>
 </table>
 

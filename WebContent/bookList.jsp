@@ -83,7 +83,6 @@
             		counter++;
             		index++;
             	}
-            	out.println("<p>" + books.size() + "</p>");
             	session.setAttribute("bookList", books);
             	%>
             </tbody>

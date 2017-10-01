@@ -25,8 +25,14 @@
         }
     </style>
     <body>
-        <a href ="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
-        <h1 style = "text-align: center">Shopping Cart</h1>
+        <table width = "75%">
+        <tr>
+            <td width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
+            <td width="25%">
+                <a href="logout.jsp">Logout</a>
+            </td>
+        </tr>
+    </table>        <h1 style = "text-align: center">Shopping Cart</h1>
         <%  int index = 0;
             int counter = 0;
             int bookType;

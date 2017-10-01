@@ -20,11 +20,20 @@
     <title>Order Confirmation</title>
 </head>
 <body>
-<a href ="http://localhost:8080/index.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
-<a href="shoppingCart.jsp"><img src="image/images/cart.png" alt="cart" width="80" height ="80"/></a>
+<table class="Banner" width = "75%">
+        <tr class="Banner">
+            <td class="Banner" width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
+            <td class="Banner" width="20%">
+                <a href="shoppingCart.jsp"><img src="image/images/cart.png" alt="cart" width="80" height ="80"/></a>
+            </td>
+            <td class="Banner">
+            	<a href="logout.jsp">Logout</a>
+            </td>
+        </tr>
+    </table>
 </br>
 <table class="CartInfo" align="center">
-    <div class="Title"><thead><b>Items Ordered:</b></thead></div>
+    <div class="Title" style="text-align:center"><thead><b>Items Ordered:</b></thead></div>
     <tr>
         <th>Book Cover</th>
         <th>Book Title</th>
@@ -93,6 +102,9 @@
         table.CartInfo tr, td, th{
             border: 1px solid black;
             border-collapse: collapse;
+        }
+        table.Banner, tr.Banner, td.Banner, th.Banner {
+        	border: 0px solid black;
         }
         td, th {
             padding: 5px;
@@ -230,113 +242,113 @@
     int currentMonth = cal.get(Calendar.MONTH);
     String deliveryMonth = "January";
     switch (currentMonth) {
-    case 1:
+    case 0:
     	deliveryMonth = "January";
     	break;
-    case 2:
+    case 1:
     	deliveryMonth = "February";
     	break;
-    case 3:
+    case 2:
     	deliveryMonth = "March";
     	break;
-    case 4:
+    case 3:
     	deliveryMonth = "April";
     	break;
-    case 5:
+    case 4:
     	deliveryMonth = "May";
     	break;
-    case 6:
+    case 5:
     	deliveryMonth = "June";
     	break;
-    case 7:
+    case 6:
     	deliveryMonth = "July";
     	break;
-    case 8:
+    case 7:
     	deliveryMonth = "August";
     	break;
-    case 9:
+    case 8:
     	deliveryMonth = "September";
     	break;
-    case 10:
+    case 9:
     	deliveryMonth = "October";
     	break;
-    case 11:
+    case 10:
     	deliveryMonth = "November";
     	break;
-    case 12:
+    case 11:
     	deliveryMonth = "December";
     	break;
     }
     for(int i = 0; i < 4; i++) {
     	dayOfDelivery++;
     	switch(currentMonth) {
-    	case 1:
+    	case 0:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "February";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 2:
+    	case 1:
     		if (dayOfDelivery > 28) {
     			deliveryMonth = "March";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 3:
+    	case 2:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "April";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 4:
+    	case 3:
     		if(dayOfDelivery > 30) {
     			deliveryMonth = "May";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 5:
+    	case 4:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "June";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 6:
+    	case 5:
     		if(dayOfDelivery > 30) {
     			deliveryMonth = "July";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 7:
+    	case 6:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "August";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 8:
+    	case 7:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "September";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 9:
+    	case 8:
     		if(dayOfDelivery > 30) {
     			deliveryMonth = "October";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 10:
+    	case 9:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "November";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 11:
+    	case 10:
     		if(dayOfDelivery > 30) {
     			deliveryMonth = "December";
     			dayOfDelivery = 1;
     		}
     		break;
-    	case 12:
+    	case 11:
     		if(dayOfDelivery > 31) {
     			deliveryMonth = "January";
     			dayOfDelivery = 1;
