@@ -40,7 +40,7 @@
         %>
     <tr>
         <td>
-            <img src="image/images/<%=book.getIsbnForCovers()%>.jpg" width = "170" height = "275">
+            <img src="image/images/<%=book.getIsbn()%>.jpg" width = "170" height = "275">
         </td>
         <td>
             <%out.println(book.getBookName());%>

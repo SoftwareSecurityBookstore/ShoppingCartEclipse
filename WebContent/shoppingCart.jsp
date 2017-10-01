@@ -30,7 +30,7 @@
         <%  int index = 0;
             int counter = 0;
             int bookType;
-            String isbn;
+            long isbn;
             Book a;%>
         <%if (cart.size() != 0) { %>
         <table style ="margin: 0 auto;" border="1">
@@ -49,7 +49,7 @@
             <tbody>
                     <%for (int i = 0; i < cart.size(); i++) {
                         a = cart.getBook(i);
-                        isbn = a.getIsbnForCovers();
+                        isbn = a.getIsbn();
                         bookType = cart.getBookType(index);
                         out.println("<tr>");
                         switch (bookType) {

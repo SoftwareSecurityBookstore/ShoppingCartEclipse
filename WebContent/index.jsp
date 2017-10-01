@@ -34,7 +34,7 @@
         <title>Shopping Cart</title>
     </head>
     <body>
-        <a href ="http://localhost:8080/BookstoreWebsite/shoppingCart.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
+        <a href ="http://localhost:8080/BookstoreWebsite/index.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
         <%
         if( session.getAttribute("loggedIn") != null) {
         	Boolean loggedIn =  (Boolean) session.getAttribute("loggedIn");
