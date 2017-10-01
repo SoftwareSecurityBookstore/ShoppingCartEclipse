@@ -15,8 +15,6 @@
         		out.println("<a href='logout.jsp'>Logout</a>");
         		//display logged in information
         	} else {
-        		out.println("<a href='logout.jsp'>Logout</a>");
-        		out.println("</br>");
         		out.println("<h1>Welcome to the Kennesaw Bookstore</h1></br>");
         		out.println("<h2>Please either login or register to begin using the bookstore<h2>");
         		out.println("<a href='login.jsp'>Login</a>");
