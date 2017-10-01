@@ -13,23 +13,15 @@
 
 
 <body>
-<a href ="${pageContext.request.contextPath}/shoppingCart.jsp"><img src="image/images/ksu (1).png" width = "350" height = "100" alt = "Kennesaw Logo"></a>
-        <h1 style = "text-align: center">Shopping Cart</h1>
-	<h1>Index</h1>
+
+        <h1 style = "text-align: center">Index</h1>
+	
 	<a href="login.jsp">Login</a>
 	<p>
-	<a href="bookList.jsp">Book List</a>
+		<a href="bookList.jsp">Book List</a>
 	</p>
 	
-
-
-
-
-
-
-                
-            
-
-
+	
+	
 </body>
 </html>
