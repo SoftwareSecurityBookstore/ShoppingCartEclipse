@@ -83,10 +83,13 @@
             		counter++;
             		index++;
             	}
+            	out.println("<p>" + books.size() + "</p>");
             	session.setAttribute("bookList", books);
             	%>
             </tbody>
      </table>
+     <form method='POST' action='${pageContext.request.contextPath}/BookListController'>
      <div style="text-align: center"><input type="submit" name="action" value="Checkout"/></div>
+     </form>
 </body>
 </html>

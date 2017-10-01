@@ -56,7 +56,7 @@ public class CartController extends HttpServlet {
                     return;
                 }
             } else if (strAction.equals("Continue Shopping")) {
-                response.sendRedirect("http://localhost:8080/BookstoreWebsite/shoppingCart.jsp"); //sends user back to the home page to continue searching for books
+                response.sendRedirect("http://localhost:8080/BookstoreWebsite/bookList.jsp"); //sends user back to the home page to continue searching for books
                 return;
             } else if (strAction.equals("Checkout")) {
                 response.sendRedirect("http://localhost:8080/BookstoreWebsite/OrderInformation.jsp"); //sends the user to the checkout page to complete their purchase
