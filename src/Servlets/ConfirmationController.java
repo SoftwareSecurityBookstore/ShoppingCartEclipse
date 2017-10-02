@@ -31,7 +31,7 @@ public class ConfirmationController extends HttpServlet {
 	        	Book b = cart.getBook(i);
 	        	int amountPurchased = cart.getBookQuantity(i);
 	        	int newAmount = b.getNewQuantity() - amountPurchased;
-	        	stat.executeQuery("update books set newQuantity = '" + newAmount + "' where isbn = '" + b.getIsbn() + "'");
+	        	stat.executeUpdate("update books set newQuantity = '" + newAmount + "' where isbn = '" + b.getIsbn() + "'");
 	        }
 
 	        conn.commit();
