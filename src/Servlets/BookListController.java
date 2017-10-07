@@ -28,8 +28,7 @@ public class BookListController extends HttpServlet {
 			books = new ArrayList<Book>();
 			try {
 				Class.forName("org.sqlite.JDBC");
-		    String path = getServletContext().getRealPath("bookstore.db");
-		    Connection conn = DriverManager.getConnection("jdbc:sqlite:" + path);          
+				Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\db\\bookstore.db");         
 		    Statement stat = conn.createStatement();    
 		    ResultSet rs = stat.executeQuery("select * from books;");
 		    

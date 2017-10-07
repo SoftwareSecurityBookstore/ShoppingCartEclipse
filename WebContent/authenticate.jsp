@@ -7,8 +7,7 @@
     String username = request.getParameter("username");   
     String password = request.getParameter("password");
     Class.forName("org.sqlite.JDBC");
-    String path = getServletContext().getRealPath("bookstore.db");
-    Connection conn = DriverManager.getConnection("jdbc:sqlite:" + path);          
+    Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\db\\bookstore.db");          
     PreparedStatement pst = conn.prepareStatement("Select Username , Password from Members where Username=? and Password=?");
     pst.setString(1, username);
     pst.setString(2, password);
