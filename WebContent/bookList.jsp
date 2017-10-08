@@ -45,7 +45,7 @@
 	
 	<%//iterate through the list of books and display each book
 	//each book needs to have an add to cart button %>
-	<table width = "75%">
+	<table width = "100%">
         <tr>
             <td width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
             <td width="20%">

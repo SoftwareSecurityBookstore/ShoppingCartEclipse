@@ -20,7 +20,7 @@
     <title>Order Confirmation</title>
 </head>
 <body>
-<table class="Banner" width = "75%">
+<table class="Banner" width = "100%">
         <tr class="Banner">
             <td class="Banner" width= "75%"><a href="${pageContext.request.contextPath}/index.jsp"><img src="image/images/ksu (1).png" width="350" height="100" alt="Kennesaw Logo"></a></td>
             <td class="Banner" width="20%">
