@@ -23,15 +23,14 @@ public class ConfirmationController extends HttpServlet {
     	//update the books database and subtract the number of books purchased in this session.
     	try {
 	    	Class.forName("org.sqlite.JDBC");
-	        String path = getServletContext().getRealPath("bookstore.db");
-	        Connection conn = DriverManager.getConnection("jdbc:sqlite:" + path);          
+	    	Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\db\\bookstore.db");          
 	        Statement stat = conn.createStatement();   
 
 	        for(int i = 0; i < cart.getNumItemsInCart(); i++) {
 	        	Book b = cart.getBook(i);
 	        	int amountPurchased = cart.getBookQuantity(i);
 	        	int newAmount = b.getNewQuantity() - amountPurchased;
-	        	stat.executeQuery("update books set newQuantity = '" + newAmount + "' where isbn = '" + b.getIsbn() + "'");
+	        	stat.executeUpdate("update books set newQuantity = '" + newAmount + "' where isbn = '" + b.getIsbn() + "'");
 	        }
 
 	        conn.commit();

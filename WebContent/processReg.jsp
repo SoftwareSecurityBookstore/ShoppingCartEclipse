@@ -6,8 +6,7 @@
     String username = request.getParameter("username");    
     String password = request.getParameter("password");
     Class.forName("org.sqlite.JDBC");
-    String path = getServletContext().getRealPath("bookstore.db");
-    Connection conn = DriverManager.getConnection("jdbc:sqlite:" + path); 
+    Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\db\\bookstore.db"); 
     conn.setAutoCommit(false);
     Statement st = conn.createStatement();
     int i = st.executeUpdate("insert into members(Username, Password) values ('" + username + "','" + password + "' )");
