@@ -39,6 +39,8 @@
         		out.println("<a class='link' style='text-align:center' href='register.jsp'>Register</a>");
         		out.println("</br>");
 =======
+=======
+>>>>>>> 828e0a4470076f9fed2c344b97f01701a12cdd4e
         	else {        		
         		out.println("<h1>Welcome to the Kennesaw Bookstore</h1></br>");
         		out.println("<h2>Please either login or register to begin using the bookstore<h2>");
@@ -46,6 +48,9 @@
         		out.println("</br>");
         		out.println("<a href='register.jsp'>Register</a>");
         		
+<<<<<<< HEAD
+>>>>>>> 828e0a4470076f9fed2c344b97f01701a12cdd4e
+=======
 >>>>>>> 828e0a4470076f9fed2c344b97f01701a12cdd4e
         	}
         } 
@@ -56,9 +61,14 @@
     		out.println("<a class='link' href='login.jsp'>Login</a>");
     		out.println("</br>");
 <<<<<<< HEAD
+<<<<<<< HEAD
     		out.println("<a class='link' href='register.jsp'>Register</a>");
     		out.println("</br>");
     		out.println("<a class='link' href='bookList.jsp'>Book List</a>");
+=======
+    		out.println("<a href='register.jsp'>Register</a>");
+    		
+>>>>>>> 828e0a4470076f9fed2c344b97f01701a12cdd4e
 =======
     		out.println("<a href='register.jsp'>Register</a>");
     		
