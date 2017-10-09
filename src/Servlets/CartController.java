@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Servlets;
 
 import Objects.ShoppingCart;
@@ -42,7 +38,7 @@ public class CartController extends HttpServlet {
 
                 Book a;
                 a = cart.getBook(indexInt);
-                String isbn = a.getIsbnForCovers();
+                long isbn = a.getIsbn();
                 int bookType = cart.getBookType(indexInt);
                 if(newQtyInt != 0) {
                     cart.updateCart(isbn, newQtyInt, bookType); //updates the books in the cart at the index specified

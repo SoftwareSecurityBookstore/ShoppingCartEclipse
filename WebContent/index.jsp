@@ -5,6 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Kennesaw Bookstore</title>
+        <%session.setAttribute("bookListError", null); //ensure error with bookList is empty at beginning of program run %>
     </head>
     <body>
     	<style>
@@ -40,7 +41,7 @@
         	}
         } else {
         	out.println("</br>");
-       	 	out.println("<h1>Welcome to the Kennesaw Bookstore</h1></br>");
+       	 	out.println("<h1 style='text-align:center'>Welcome to the Kennesaw Bookstore</h1></br>");
 			out.println("<h2 style='text-align:center'>Please either login or register to begin using the bookstore<h2>");
 			out.println("<a class='link' href='login.jsp'>Login</a>");
         	out.println("<a class='link' href='register.jsp'>Register</a>");

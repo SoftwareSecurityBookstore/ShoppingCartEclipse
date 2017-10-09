@@ -239,18 +239,18 @@ public class ShoppingCart {
         }
     }
 
-    public void removeFromCart(String ISBN, int type) {
+    public void removeFromCart(long ISBN, int type) {
         //ISBN sent must be type String, and type is 1 = new, 2 = used, 3 = rental, 4 = ebook
         //deletes the book from the cart if the book in the cart is of the same type (ebook, rental, etc.)
         Book a;
-        String bookISBN;
+        long bookISBN;
         int tempType;
         double tempPrice;
         try {
             for (int i = 0; i < cart.size(); i++) { //iterates through cart
                 a = cart.get(i);
-                bookISBN = a.getIsbnForCovers();
-                if (bookISBN.equals(ISBN)) { //checks to see if the book in the cart is the one it's looking for
+                bookISBN = a.getIsbn();
+                if (bookISBN == ISBN) { //checks to see if the book in the cart is the one it's looking for
                     if (bookType.get(i) == type) { //checks to see if the found book is also the same type as the one it's looking for
                         switch (type) { //this is all for the price tracking with the different types.
                             case 1:
@@ -285,20 +285,20 @@ public class ShoppingCart {
         }
     }
 
-    public void updateCart(String isbn, int newQuantity, int type) { //updates the quantity of a book in the cart
+    public void updateCart(long isbn, int newQuantity, int type) { //updates the quantity of a book in the cart
 
         int changeInQuantity;
         Book a;
-        String tempIsbn;
+        long tempIsbn;
         double tempPrice;
 
         try {
             for (int i = 0; i < cart.size(); i++) { //iterates through the cart
 
                 a = cart.get(i);
-                tempIsbn = a.getIsbnForCovers();
+                tempIsbn = a.getIsbn();
 
-                if (isbn.equals(tempIsbn)) { //looks for the specific book in the array
+                if (isbn == tempIsbn) { //looks for the specific book in the array
                     if (bookType.get(i) == type) { //then makes sure the book in the cart is the same type as the book it's looking for (ebook, rental, etc.)
                         switch (type) { //switch for all the different book types
                             case 1: //new

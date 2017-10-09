@@ -55,6 +55,15 @@
             </td>
         </tr>
     </table>
+    </br>
+    </br>
+    <h2 style="text-align:center"><%
+    	if(session.getAttribute("bookListError") != null) {
+    		String error = (String) session.getAttribute("bookListError"); 
+    		out.println(error);
+    	}
+    %>
+    </h2>
 	<table style ="margin: 0 auto;" border="1">
             <thead>
 
@@ -72,11 +81,11 @@
                     a = books.get(i);
                     isbn = a.getIsbn();
                     out.println("<tr>");
-                    out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>");
-                    out.println("<td>" + a.getBookName() + "</td>");
-                    out.println("<td>" + a.getAuthor()[0] + "</td>");
-                    out.println("<td>" + a.getNewQuantity() + "</td>");
-                    out.println("<td>" + a.getNewPrice() + "</td>");%>
+                    out.println("<td><img src='image/images/" + isbn + ".jpg' width = '175' height = '275' </td>"); //cover image
+                    out.println("<td>" + a.getBookName() + "</td>"); //book title
+                    out.println("<td>" + a.getAuthor()[0] + "</td>"); //book author
+                    out.println("<td>" + a.getNewQuantity() + "</td>"); //total quantity
+                    out.println("<td>" + a.getNewPrice() + "</td>"); //price of book%>
                     <td><form method='POST' action='${pageContext.request.contextPath}/BookListController'><input style="width: 50px;" type='number' name='Qty' value=''/><input style='display:none;' type='text' name='index' value='<%out.print(counter); %>' size='1' /><input type='submit' name='action' value='Add' /></form>Max Qty: <%out.print(a.getNewQuantity());%> </td>
             	<%  out.println("<tr>");
             		counter++;

@@ -58,17 +58,28 @@ public class BookListController extends HttpServlet {
 		}
 		switch(action) {
 		case "Add":
+			//grab the index of the book in the list, works because controller has access to same list
+			//bookList.jsp uses
 			String strIndex = request.getParameter("index");
 			String strQty = request.getParameter("Qty");
 			int intIndex = Integer.parseInt(strIndex);
 			int intQty = Integer.parseInt(strQty);
 			if(intQty > 0) {
+				//if the quantity is more than 0 then find that book and check to see if the quantity
+				//added is more than the total available.
 				Book b = books.get(intIndex);
-				cart.addToCart(b, intQty, 1);
-				session.setAttribute("cart", cart);
-				response.sendRedirect("bookList.jsp");
+				if(intQty <= b.getNewQuantity()) {
+					cart.addToCart(b, intQty, 1);
+					session.setAttribute("cart", cart); //post the updated cart to session
+					session.setAttribute("bookListError", null); //null out any previous errors
+					response.sendRedirect("bookList.jsp"); //redirect back to page
+				} else {
+					String error = "Quantity Exceeded, please submit a lower quantity";
+					session.setAttribute("bookListError", error); //post error to the session
+					response.sendRedirect("bookList.jsp");
+				}
 			} else {
-				response.sendRedirect("bookList.jsp");
+				response.sendRedirect("bookList.jsp"); //if qty was 0 redirect to page
 			}
 			break;
 		case "Checkout":
