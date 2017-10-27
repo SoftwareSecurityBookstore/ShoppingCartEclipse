@@ -8,15 +8,17 @@
     Class.forName("org.sqlite.JDBC");
     Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\db\\bookstore.db"); 
     conn.setAutoCommit(false);
-    Statement st = conn.createStatement();
-    int i = st.executeUpdate("insert into members(Username, Password) values ('" + username + "','" + password + "' )");
+    PreparedStatement pst = conn.prepareStatement("insert into members(Username, Password) values (?,?)");
+    pst.setString(1, username);
+    pst.setString(2, password);
+    int i = pst.executeUpdate(); 
     if (i > 0) {
         out.print("You have registered successfully!"+"<a href='login.jsp'> Go to Login</a>");
         conn.commit();
     } else {
         response.sendRedirect("index.jsp");
     }
-    st.close();
+    pst.close();
     
     conn.close();
     
